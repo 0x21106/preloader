@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    background:#240229;
+}
+
+.preloader{
+    width:100px;
+    height:100px;
+    position: relative;
+    border-radius:50%;
+    background:linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation:preloader .6s linear infinite;
+}
+
+.preloader span{
+    width:100px;
+    height:100px;
+    position: absolute;
+    border-radius:50%;
+    background:linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /* animation:preloader .3s linear infinite; */
+}
+
+.preloader span:nth-child(1){
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    /* FF doesn't support blur filter, but SVG */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='5'/></filter></svg>#svgBlur");
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius = '5');
+    filter: blur(5px);
+}
+
+.preloader span:nth-child(2){
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+    /* FF doesn't support blur filter, but SVG */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='5'/></filter></svg>#svgBlur");
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius = '10');
+    filter: blur(10px);
+}
+
+.preloader span:nth-child(3){
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -ms-filter: blur(25px);
+    -o-filter: blur(25px);
+    /* FF doesn't support blur filter, but SVG */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='5'/></filter></svg>#svgBlur");
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius = '25');
+    filter: blur(25px);
+}
+
+.preloader span:nth-child(4){
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -ms-filter: blur(50px);
+    -o-filter: blur(50px);
+    /* FF doesn't support blur filter, but SVG */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='5'/></filter></svg>#svgBlur");
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius = '50');
+    filter: blur(50px);
+}
+
+.preloader:after{
+    content:'';
+    position: absolute;
+    top:10px;
+    left:10px;
+    right:10%;
+    bottom:10px;
+    background:#240229;
+    border-radius:50%;
+    box-shadow:inset 0px 0px 7px 1px rgba(0, 0, 0, 1);
+}
+
+@keyframes preloader{
+    0%{
+        transform:rotate(0deg);
+    }
+    
+    100%{
+        transform:rotate(360deg);
+    }
+}
